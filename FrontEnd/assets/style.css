@@ -22,6 +22,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none;
+	color: inherit;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -188,26 +190,31 @@ footer nav ul {
 
 /*** FILTRES ***/
 
-.filtres{
-	display: flex;
-	gap: 1%;
-	justify-content: center;
-	margin-bottom: 30px;
-	
-}
-.btn-filtre{
-	color: #1D6154;
-	border: solid 1px #1D6154;
-	height: 37px;
-	padding: 0 20px 0 20px;
-	border-radius: 60px;
-	font-size: 16px;
-	font-family: 'Work Sans' ;
+.filtres {
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.btn-filtre:hover{
-	background-color:#1D6154 ;
-	color: white ;
-	transition: 230ms ease;
-	cursor: pointer;
+.btn-filtre {
+    color: #1D6154;
+    border: solid 1px #1D6154;
+    height: 37px;
+    padding: 0 20px 0 20px;
+    border-radius: 60px;
+    font-size: 16px;
+    font-family: 'Work Sans';
+    cursor: pointer;
 }
+
+.btn-filtre.active,
+.btn-filtre:hover {
+    background-color: #1D6154;
+    color: white;
+    transition: 230ms ease;
+}
+
+
+
+
