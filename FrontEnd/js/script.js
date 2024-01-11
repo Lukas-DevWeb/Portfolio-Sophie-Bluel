@@ -1,8 +1,9 @@
-// Url de l'API 
+// Url Api 
 const urlApi = "http://localhost:5678/api/";
 
-// Liste des travaux qui est initié à zéro
+// Liste des travaux (initialisée à vide)
 let works = [];
+
 
 async function allWorks() {
     try {
@@ -17,24 +18,28 @@ async function allWorks() {
             throw new Error('Unexpected Error');
         }
 
+        // Extrait les données JSON de la réponse
         const data = await response.json();
 
+        // Stocke les travaux dans la variable "works"
         works = data;
         window.localStorage.setItem('works', JSON.stringify(works));
 
         generateGallery(works);
 
+        // Retourne les travaux
         return works;
 
     } catch (error) {
 
+        // Affiche une alerte avec le message d'erreur
         alert(error.message);
         throw error;
     }
 
 }
 
-// Quand un utilisateur se connecte
+// Quand l'utilisateur est connecté 
 async function adminLogin() {
     if (window.sessionStorage.getItem('token') === null) {
         categoriesButtons();
@@ -135,7 +140,7 @@ function elementGenerator(type, text, attributes = []) {
     return element;
 }
 
-// Nav Edition
+// Top édition noir
 function topBlackMenu() {
     const div = elementGenerator('div', undefined, ['class=publish']);
     const modifyLink = elementGenerator('a', undefined, ['href=#']);
@@ -160,19 +165,6 @@ function modifyProjets() {
     aLink.appendChild(spanElement);
     portfolio.prepend(myProject);
     myProject.appendChild(aLink);
-}
-
-// Lien Modifier 
-function modifyButton() {
-    const introductionSection = document.querySelector("#introduction figure");
-    const divElement = document.createElement('div');
-    const aLink = elementGenerator('a', undefined, ['href=#']);
-    const iElement = elementGenerator('i', undefined, ['class=fa-regular fa-pen-to-square']);
-    const spanElement = elementGenerator('span', 'modifier', []);
-    aLink.appendChild(iElement);
-    aLink.appendChild(spanElement);
-    divElement.appendChild(aLink);
-    introductionSection.appendChild(divElement);
 }
 
 allWorks();

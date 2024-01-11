@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
-a, abbr, acronym, address, big, cite, code, 
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, 
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary, 
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,8 +93,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
 
@@ -65,7 +142,7 @@ body {
 	font-size: 14px;
 }
 
-/*** Nav Edition ***/
+/*** Top Black Nav ***/
 
 .publish {
 	background-color: black;
@@ -86,6 +163,21 @@ body {
 	text-decoration: none;
 	display: flex;
 	gap: 12px;
+}
+
+.publish button {
+	background: #FFFFFF;
+	border-radius: 60px;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+	width: 216px;
+	height: 38px;
+	border: none;
+	cursor: pointer;
 }
 
 /*** Login & Logout ***/
@@ -239,33 +331,32 @@ a:hover {
 
 .categories {
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
-	gap: 10px;
-	margin-bottom: 50px;
+	margin: 51px 0px;
 }
 
 .btn {
-	font-family: Syne;
-	text-align: center;
-	color: #1D6154;
-	font-size: 16px;
+	font-family: 'Syne';
+	font-style: normal;
 	font-weight: 700;
-	line-height: normal;
-	padding: 5px 15px;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	height: 37px;
+	padding: 0 1.6rem;
+	color: #1D6154;
+	background-color: transparent;
 	border: 1px solid #1D6154;
 	border-radius: 60px;
-	background: none;
-	transition: .4s ease-in-out;
-    cursor: pointer;
+	margin: 0px 5px;
+	cursor: pointer;
 }
 
-.btn:hover{
-	color: #FFF;
+.categories button:focus {
+	cursor: pointer;
 	background-color: #1D6154;
+	color: white;
 }
-
-/*** Galerie ***/
 
 .gallery {
 	width: 100%;
@@ -326,7 +417,6 @@ input[type="submit"] {
 	width: 180px;
 	text-align: center;
 	border-radius: 60px;
-    cursor: pointer;
 }
 
 footer nav ul {
@@ -337,7 +427,7 @@ footer nav ul {
 	height: 60px;
 }
 
-/*** Page Login ***/
+/*** Login Page ***/
 
 #log {
 	width: 30%;
@@ -418,10 +508,11 @@ section form a {
 	justify-content: center;
 }
 
-/*** Modale_Galerie ***/
+/*** Modale Gallerie ***/
 
 #modal_1 {
 	display: none;
+	/* flex en js */
 	justify-content: center;
 	align-items: center;
 	position: fixed;
@@ -577,10 +668,11 @@ hr {
 	margin-bottom: 48px;
 }
 
-/*** Modale_Ajout ***/
+/*** Modale Ajout ***/
 
 #modal_2 {
 	display: none;
+	/* flex en js */
 	justify-content: center;
 	align-items: center;
 	position: fixed;
