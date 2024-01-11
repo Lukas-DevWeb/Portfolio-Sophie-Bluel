@@ -138,8 +138,6 @@ function createCategories(categories) {
   });
 }
 
-
-
 // Ajout de la gallery dans la modale
 function createWorksModale(works) {
   works.map((work) => {
@@ -167,7 +165,7 @@ function editMode() {
     editBtn.forEach((btn) => {
       btn.style.setProperty("display", "flex");
     });
-    console.log("Vous êtes connecté ! Enjoy !");
+    console.log("Vous êtes connecté !");
   } else {
     console.log("Vous n'êtes pas connecté ! Identifiez-vous !");
   }
