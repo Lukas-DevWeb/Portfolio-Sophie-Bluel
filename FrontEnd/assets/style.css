@@ -254,34 +254,30 @@ a:hover {
 
 .categories {
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
-	margin: 51px 0px;
+	gap: 10px;
+	margin-bottom: 50px;
 }
 
 .btn {
-	font-family: 'Syne';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 19px;
+	font-family: Syne;
 	text-align: center;
-	height: 37px;
-	padding: 0 1.6rem;
-
 	color: #1D6154;
-
-	background-color: transparent;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: normal;
+	padding: 5px 15px;
 	border: 1px solid #1D6154;
 	border-radius: 60px;
-	margin: 0px 5px;
-	cursor: pointer;
+	background: none;
+	transition: .4s ease-in-out;
+    cursor: pointer;
 }
 
-.categories button:hover,
-.categories button:focus{
-	cursor: pointer;
+.btn:hover{
+	color: #FFF;
 	background-color: #1D6154;
-	color: white;
 }
 
 /*** Galerie ***/
@@ -345,6 +341,7 @@ input[type="submit"] {
 	width: 180px;
 	text-align: center;
 	border-radius: 60px;
+    cursor: pointer;
 }
 
 footer nav ul {

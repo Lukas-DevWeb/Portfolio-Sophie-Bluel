@@ -1,4 +1,5 @@
-- Restructurer le code avec des commentaires / 
+- Restructurer le code avec des commentaires /
+- Modifier 'publier changement' sur la Nav edition
 - Régler le problème du filtre 
 - Proprièté 'cursor' sur les boutons et les zones de texte
 - Faire du logo un point d'ancrage pour revenir sur la page principale du site 
