@@ -1,5 +1,5 @@
 - Restructurer le code avec des commentaires /
-- Modifier 'publier changement' sur la Nav edition
+- Modifier la Nav edition /
 - Passer les fichiers au Validateur W3C /
 - Régler le problème du filtre 
 - Proprièté 'cursor' sur les boutons et les zones de texte
