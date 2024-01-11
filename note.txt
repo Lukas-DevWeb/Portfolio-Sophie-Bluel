@@ -1,6 +1,5 @@
-- Restructurer le code avec des commentaires /
 - Modifier la Nav edition /
-- Passer les fichiers au Validateur W3C /
-- Régler le problème du filtre 
-- Proprièté 'cursor' sur les boutons et les zones de texte /
+- Passer les fichiers au Validateur W3C 
+- Régler le problème du filtre /
+- Proprièté 'cursor' sur les boutons et les zones de texte 
 - Faire du logo un point d'ancrage pour revenir sur la page principale du site 
