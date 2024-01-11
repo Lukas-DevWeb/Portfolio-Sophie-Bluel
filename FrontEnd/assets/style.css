@@ -88,21 +88,6 @@ body {
 	gap: 12px;
 }
 
-.publish button {
-	background: #FFFFFF;
-	border-radius: 60px;
-	font-family: 'Work Sans';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 16px;
-	color: #000000;
-	width: 216px;
-	height: 38px;
-	border: none;
-	cursor: pointer;
-}
-
 /*** Login & Logout ***/
 
 #logout {

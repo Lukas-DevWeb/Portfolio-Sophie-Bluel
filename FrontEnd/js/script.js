@@ -140,7 +140,6 @@ function topBlackMenu() {
     const div = elementGenerator('div', undefined, ['class=publish']);
     const modifyLink = elementGenerator('a', undefined, ['href=#']);
     const span = elementGenerator('span', 'Mode édition', []);
-    const button = elementGenerator('button', 'publier les changements', []);
     const icon = elementGenerator('i', undefined, ['class=fa-regular fa-pen-to-square']);
     div.appendChild(modifyLink);
     document.querySelector('body').prepend(div);
