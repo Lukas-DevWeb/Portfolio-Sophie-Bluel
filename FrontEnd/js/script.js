@@ -162,5 +162,18 @@ function modifyProjets() {
     myProject.appendChild(aLink);
 }
 
+// Lien Modifier 
+function modifyButton() {
+    const introductionSection = document.querySelector("#introduction figure");
+    const divElement = document.createElement('div');
+    const aLink = elementGenerator('a', undefined, ['href=#']);
+    const iElement = elementGenerator('i', undefined, ['class=fa-regular fa-pen-to-square']);
+    const spanElement = elementGenerator('span', 'modifier', []);
+    aLink.appendChild(iElement);
+    aLink.appendChild(spanElement);
+    divElement.appendChild(aLink);
+    introductionSection.appendChild(divElement);
+}
+
 allWorks();
 adminLogin();
