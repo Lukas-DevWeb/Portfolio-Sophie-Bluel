@@ -519,11 +519,6 @@ footer nav ul {
 	cursor: pointer;
 }
 
-.validate-btn:hover {
-	background: #1D6154;
-	transition: 0.4s ease-out;
-}
-
 .return-arrow {
 	position: absolute;
 	left: 30px;
