@@ -45,7 +45,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/** end reset css**/
+/** end reset css **/
 body {
 	max-width: 1140px;
 	margin:auto;
@@ -131,19 +131,6 @@ li:hover {
 	text-align: center;
 	margin-bottom: 50px;
 }
-.modifier1 {
-	position: absolute;
-	bottom: -20px;
-	left: 50px;
-	background: white;
-	border-style: none;
-}
-.modifier2 {
-	position: absolute;
-	top: -40px;
-	background: white;
-	border-style: none;
-}
 .modifier3 {
 	position: absolute;
 	top: 7px;
@@ -210,6 +197,7 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em;
 }
+/*** Filtres ***/
 .btns {
 	display: none;
 	justify-content: center;
@@ -229,6 +217,8 @@ footer nav ul {
 	color: white;
 	background: #1D6154;
 }
+
+/*** Modale 1 ***/
 #login h2{
 	text-align: center;
 	margin: 150px 0 7px 0;
@@ -261,6 +251,8 @@ footer nav ul {
 	text-align: center;
 	color: black;
 }
+
+/*** Modale 2 ***/
 .edition {
 	display: none;
 	justify-content: center;
