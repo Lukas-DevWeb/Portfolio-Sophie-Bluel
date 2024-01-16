@@ -45,15 +45,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/** end reset css **/
+/** end reset css**/
 body {
 	max-width: 1140px;
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
-	background-color: #FFFEF8;
 }
-
 header {
 	display: flex;
 	justify-content: space-between;
@@ -131,20 +129,32 @@ li:hover {
 	text-align: center;
 	margin-bottom: 50px;
 }
+.modifier1 {
+	position: absolute;
+	bottom: -20px;
+	left: 50px;
+	background: white;
+	border-style: none;
+}
+.modifier2 {
+	position: absolute;
+	top: -40px;
+	background: white;
+	border-style: none;
+}
 .modifier3 {
 	position: absolute;
 	top: 7px;
 	left: calc(50% + 120px);
 	background: white;
 	border-style: none;
-	cursor: pointer;
 }
 .gallery {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
-	grid-row-gap: 28px;
+	grid-row-gap: 20px;
 }
 .gallery img {
 	width: 100%;
@@ -173,7 +183,6 @@ li:hover {
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-	cursor: pointer;
 }
 #contact label {
 	margin: 2em 0 1em 0;
@@ -197,7 +206,6 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em;
 }
-/*** Filtres ***/
 .btns {
 	display: none;
 	justify-content: center;
@@ -206,19 +214,16 @@ footer nav ul {
 }
 .btn {
 	font-family: 'Syne';
-	background: #FFFEF8;
+	background: white;
 	color: #1D6154;
 	border-radius: 60px;
 	border: 1px  #1D6154 solid;
 	padding: 8px 15px;
-	cursor: pointer;
 }
 .active {
 	color: white;
 	background: #1D6154;
 }
-
-/*** Modale 1 ***/
 #login h2{
 	text-align: center;
 	margin: 150px 0 7px 0;
@@ -251,8 +256,6 @@ footer nav ul {
 	text-align: center;
 	color: black;
 }
-
-/*** Modale 2 ***/
 .edition {
 	display: none;
 	justify-content: center;
@@ -345,7 +348,6 @@ footer nav ul {
 	border: none;
 	font-size: 9px;
 	border-radius: 2px;
-	cursor: pointer;
 }
 .separator {
 	width: 420px;
@@ -379,7 +381,6 @@ footer nav ul {
 	padding: 10px 50px;
 	margin: 38px 0 23px 0;
 	width: 240px;
-	cursor: pointer;
 }
 .valid {
 	font-family: 'Syne';
@@ -406,7 +407,6 @@ footer nav ul {
 #sendImg {
 	display: flex;
 	flex-direction: column;
-	cursor: pointer;
 }
 #sendImg label {
  margin: 21px 0 10px 0;

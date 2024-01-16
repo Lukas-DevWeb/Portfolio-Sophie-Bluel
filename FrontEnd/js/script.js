@@ -18,25 +18,25 @@ const selectCategory = document.getElementById('categorie');
 const submitButton = document.querySelector('.valid');
 let preview = document.getElementById('preview');
 
-// Récupération des projets de l'API
+// --- Récupération des projets de l'API ---
 async function getWorks() {
     const response = await fetch('http://localhost:5678/api/works');
     const works = await response.json();
     return works;
 }
 
-// Récupération des catégories de l'API
+// --- Récupération des catégories de l'API ---
 async function getCategories() {
     const response = await fetch('http://localhost:5678/api/categories');
     const arrCategories = await response.json();
 
-    // Insertion du bouton `Tous` dans le json
+    // --- Insertion du bouton `Tous` dans le json ---
     const btnAll = {id: 0, name: `Tous`};
     arrCategories.unshift(btnAll);
     return arrCategories;
 }
 
-// Création et affichage des boutons filtres
+// --- Création et affichage des boutons filtres ---
 async function displayCategoriesBtn() {
 
     const btns = document.querySelector('.btns');
@@ -50,7 +50,7 @@ async function displayCategoriesBtn() {
         btn.setAttribute('id', arrCategories[i].id );
         btns.appendChild(btn);
 
-        // Classe .active au chargement de la page
+        // --- Classe .active au chargement de la page ---
         if (arrCategories[i].id === 0) {
             btn.classList.add(`active`);
         }
@@ -60,14 +60,14 @@ async function displayCategoriesBtn() {
                 btn.classList.remove('active');
             });
             btn.classList.toggle('active');
-            // Condition pour le bouton Tous
+            // --- Condition pour le bouton Tous ---
             showWorksByCategory(arrCategories[i].id);
         });
     }
 }
 if (!token) {displayCategoriesBtn();}
 
-// Filtrage des projets
+// --- Filtrage des projets ---
 async function showWorksByCategory(categoryId) {
 
     gallery.innerHTML = '';
@@ -89,7 +89,7 @@ async function showWorksByCategory(categoryId) {
 }
 showWorksByCategory(0);
 
-// Conditions pour mise en page si token valide
+// --- Conditions pour mise en page si token valide ---
 if (token) {
     edition.style = `display: flex`;
     login.innerText = `logout`;
@@ -98,13 +98,13 @@ if (token) {
     });
 }
 
-// Affichage de la modale
+// --- Affichage de la modale ---
 displayModal.addEventListener('click', function () {
     modalContainer.style.display = 'flex';
     modal.style.display = 'flex';
 });
 
-// Fermeture de la modale
+// --- Fermeture de la modale ---
 document.addEventListener('click', function ( e ) {
     if (e.target === modalContainer ) {
         closeModal()
@@ -120,7 +120,7 @@ close.forEach(function (button) {
     button.addEventListener('click', closeModal);
 });
 
-// Affichage de la galerie dans la modale
+// --- Affichage de la galerie dans la modale ---
 async function showWorksInModal() {
     let arrWorks = await getWorks();
     arrWorks.forEach((work) => {
@@ -130,6 +130,7 @@ async function showWorksInModal() {
         const delButton = document.createElement('button');
         figureImgModal.src = work.imageUrl;
         figureImgModal.alt = work.title;
+        editButton.innerText = 'éditer';
         editButton.classList.add('editer');
         delButton.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
         delButton.classList.add('delete');
@@ -137,12 +138,12 @@ async function showWorksInModal() {
             confirmDelWork(work.id);
         });
         worksContainer.appendChild( figureModal );
-        figureModal.append(figureImgModal, delButton);
+        figureModal.append(figureImgModal, editButton, delButton);
     });
 }
 showWorksInModal();
 
-// Requète DELETE pour supprimer un projet
+// --- Requète DELETE pour supprimer un projet ---
 async function delWork(workId) {
     const response = await fetch( `http://${window.location.hostname}:5678/api/works/${workId}`, {
         method: 'DELETE',
@@ -164,7 +165,7 @@ async function delWork(workId) {
     }
 }
 
-// Confirmation pour suppression 
+// --- Confirmation pour suppression ---
 function confirmDelWork(workId) {
     if (confirm('Êtes-vous sûr de vouloir supprimer ce projet ?')) {
         delWork(workId);
@@ -174,14 +175,14 @@ function confirmDelWork(workId) {
     }
 }
 
-// "Redirection" vers ajout d'un projet
+// --- "Redirection" vers ajout d'un projet ---
 addWork.addEventListener('click', function () {
     modal.style.display = 'none';
     modal2.style.display = 'flex';
     checkConditions();
 });
 
-// Flèche retour
+// --- Flèche retour ---
 back.addEventListener('click', function () {
     modal.style.display = 'flex';
     modal2.style.display = 'none';
@@ -189,7 +190,7 @@ back.addEventListener('click', function () {
     upTitle.value = '';
 });
 
-// Récupération dynamique des catégories pour ajout de projet
+// --- Récupération dynamique des catégories pour ajout de projet ---
 async function getSelectCategory() {
     const category = await getCategories();
     for (let i = 1; i < category.length; i++) {
@@ -201,7 +202,7 @@ async function getSelectCategory() {
 }
 getSelectCategory();
 
-// Conditions pour le bouton Valider
+// --- Conditions pour le bouton Valider ---
 const checkConditions = () => {
     if (uploadImg.files[ 0 ] ?. size < 4000000 && upTitle.value !== '' && selectCategory.value !== '') {
         submitButton.classList.add('envoyer');
@@ -213,7 +214,7 @@ upTitle.addEventListener('input', checkConditions);
 selectCategory.addEventListener('input', checkConditions);
 uploadImg.addEventListener('input', checkConditions);
 
-// Requete POST pour envoyer un nouveau work
+// --- Requete POST pour envoyer un nouveau work ---
 submitButton.addEventListener('click', async ( e ) => {
     e.preventDefault();
     const formData = new FormData(document.getElementById('sendImg'));
@@ -245,14 +246,14 @@ submitButton.addEventListener('click', async ( e ) => {
     }
 });
 
-// Prévisualisation de l'image
+// --- Prévisualisation de l'image ---
 function previewImage(event) {
     const file = event.target.files[0];
     const imageUrl = URL.createObjectURL(file);
     preview.src = imageUrl;
 }
 
-// Suppression du token si logout
+// --- Suppression du token si logout ---
 login.addEventListener('click', function () {
     if (token) {
         sessionStorage.removeItem('accessToken');
