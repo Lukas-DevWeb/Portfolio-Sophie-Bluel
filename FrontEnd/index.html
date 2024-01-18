@@ -3,13 +3,18 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Sophie Bluel - Architecte d'intérieur</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sophie Bluel - Architecte d'intérieur</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- FONTS -->
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+        <!-- ICONS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <meta name="description" content="">
+        <!-- JavaScript -->
+        <script src="./js/script.js" defer></script>
+        <!-- CSS -->
         <link rel="stylesheet" href="./assets/style.css">
     </head>
 
@@ -40,7 +45,7 @@
             </nav>
         </header>
         <main>
-            <section id="introduction">
+            <div id="introduction">
                 <figure>
                     <img src="./assets/images/sophie-bluel.png" alt="sophie-bluel">
                     <button class="modifier modifier1">
@@ -56,7 +61,7 @@
                     <p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
                     <p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
                 </article>
-            </section>
+            </div>
             <section id="portfolio">
                 <h2>Mes Projets</h2>
                 <button class="modifier modifier3">
@@ -86,7 +91,7 @@
                                 <i class="fa-regular fa-image"></i>
                                 <label for="uploadImg">+ Ajouter photo</label>
                                 <input type="file" id="uploadImg" onchange="previewImage(event)">
-                                <img id="preview">
+                                <img  src="#" alt=""  id="preview">
                                 <p>jpg, png : 4mo max</p>
                             </div>
                             <label for="titre">Titre</label>
@@ -123,6 +128,5 @@
                 </ul>
             </nav>
         </footer>
-        <script src="./js/script.js"></script>
     </body>
 </html>
