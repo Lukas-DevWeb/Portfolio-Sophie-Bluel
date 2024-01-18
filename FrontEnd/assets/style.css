@@ -262,6 +262,7 @@ footer nav ul {
 	color: white;
 	background: black;
 	border: none;
+	cursor: pointer;
 }
 .publier {
 	color: black;
@@ -428,7 +429,7 @@ footer nav ul {
 .addImg label {
 	color: #306685;
 	background: #CBD6DC;
-	padding: 10px 33px;
+	padding: 10px 10px;
 	border-radius: 50px;
 	cursor: pointer;
 }

@@ -61,6 +61,8 @@
                     <i class="fa-regular fa-pen-to-square"></i>&ensp;modifier
                 </button>
                 <div class="modalContainer">
+
+                    <!-- MODAL 1 GALERIE PHOTO -->
                     <div id="modal">
                         <button class="close">
                             <i class="fa-regular fa-xmark"></i>
@@ -70,6 +72,10 @@
                         <div class="separator"></div>
                         <button class="addWork">Ajouter une photo</button>
                     </div>
+                    <!-- MODAL 1 GALERIE PHOTO -->
+
+
+                    <!-- MODAL 2 AJOUT PHOTO -->
                     <div id="modal2">
                         <button class="back">
                             <i class="fa-regular fa-arrow-left-long"></i>
@@ -83,17 +89,21 @@
                                 <i class="fa-regular fa-image"></i>
                                 <label for="uploadImg">+ Ajouter photo</label>
                                 <input type="file" id="uploadImg" onchange="previewImage(event)">
-                                <img  src="#" alt=""  id="preview">
+                                <img src="#" alt="" id="preview">
                                 <p>jpg, png : 4mo max</p>
                             </div>
                             <label for="titre">Titre</label>
                             <input type="text" name="titre" id="titre">
                             <label for="categorie">Catégorie</label>
-                            <select name="categorie" id="categorie"></select>
+                            <select name="categorie" id="categorie">
+                                <option id="#" label="&ensp;"></option>
+                            </select>
                             <div class="separator"></div>
                             <button type="submit" class="valid">Valider</button>
                         </form>
                     </div>
+                    <!-- MODAL 2 AJOUT PHOTO -->
+
                 </div>
                 <div class="btns"></div>
                 <div class="gallery"></div>
