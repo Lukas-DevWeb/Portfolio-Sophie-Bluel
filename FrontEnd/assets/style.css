@@ -129,32 +129,20 @@ li:hover {
 	text-align: center;
 	margin-bottom: 50px;
 }
-.modifier1 {
-	position: absolute;
-	bottom: -20px;
-	left: 50px;
-	background: white;
-	border-style: none;
-}
-.modifier2 {
-	position: absolute;
-	top: -40px;
-	background: white;
-	border-style: none;
-}
 .modifier3 {
 	position: absolute;
 	top: 7px;
 	left: calc(50% + 120px);
 	background: white;
 	border-style: none;
+	cursor: pointer;
 }
 .gallery {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+	grid-row-gap: 25px;
 }
 .gallery img {
 	width: 100%;
@@ -183,6 +171,7 @@ li:hover {
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	cursor: pointer;
 }
 #contact label {
 	margin: 2em 0 1em 0;
@@ -219,6 +208,7 @@ footer nav ul {
 	border-radius: 60px;
 	border: 1px  #1D6154 solid;
 	padding: 8px 15px;
+	cursor: pointer;
 }
 .active {
 	color: white;
@@ -348,6 +338,7 @@ footer nav ul {
 	border: none;
 	font-size: 9px;
 	border-radius: 2px;
+	cursor: pointer;
 }
 .separator {
 	width: 420px;
@@ -361,6 +352,7 @@ footer nav ul {
 	right: 36px;
 	background: white;
 	border: none;
+	cursor: pointer;
 }
 .close i, .back i {
 	font-weight: 600;
@@ -371,6 +363,7 @@ footer nav ul {
 	left: 36px;
 	background: white;
 	border: none;
+	cursor: pointer;
 }
 .addWork {
 	font-family: 'Syne';
@@ -381,6 +374,7 @@ footer nav ul {
 	padding: 10px 50px;
 	margin: 38px 0 23px 0;
 	width: 240px;
+	cursor: pointer;
 }
 .valid {
 	font-family: 'Syne';
@@ -391,6 +385,7 @@ footer nav ul {
 	padding: 10px 50px;
 	margin: 38px auto 23px auto;
 	width: 240px;
+	cursor: pointer;
 }
 #modal p {
 	font-family: 'Work Sans';
@@ -435,6 +430,7 @@ footer nav ul {
 	background: #CBD6DC;
 	padding: 10px 33px;
 	border-radius: 50px;
+	cursor: pointer;
 }
 .addImg p {
 	padding-bottom: 19px;

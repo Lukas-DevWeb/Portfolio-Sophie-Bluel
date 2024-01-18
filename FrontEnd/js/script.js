@@ -130,7 +130,6 @@ async function showWorksInModal() {
         const delButton = document.createElement('button');
         figureImgModal.src = work.imageUrl;
         figureImgModal.alt = work.title;
-        editButton.innerText = 'éditer';
         editButton.classList.add('editer');
         delButton.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
         delButton.classList.add('delete');
