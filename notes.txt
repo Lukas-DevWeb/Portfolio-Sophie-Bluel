@@ -1,8 +1,0 @@
-- Modifier la Nav edition /
-- Passer les fichiers au Validateur W3C /
-- Régler le problème du filtre /
-- Proprièté 'cursor' sur les boutons et les zones de texte /
-- Faire du logo un point d'ancrage pour revenir sur la page principale du site
-- Le bouton sur le formulaire d'ajout doit passer au vert quand tous les champs sont remplis plus categorie objet /
-- Icon poubelle ne s'affiche pas ? / 
-- Changer la couleur de fond du site /
