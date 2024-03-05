@@ -18,14 +18,14 @@ const selectCategory = document.getElementById('categorie');
 const submitButton = document.querySelector('.valid');
 let preview = document.getElementById('preview');
 
-// --- Récupération des projets de l'API
+// ---------- Récupération des projets de l'API ---------- //
 async function getWorks() {
     const response = await fetch('http://localhost:5678/api/works');
     const works = await response.json();
     return works;
 }
 
-// --- Récupération des catégories de l'API
+// ---------- Récupération des catégories de l'API ---------- //
 async function getCategories() {
     const response = await fetch('http://localhost:5678/api/categories');
     const arrCategories = await response.json();
@@ -36,7 +36,7 @@ async function getCategories() {
     return arrCategories;
 }
 
-// --- Création et affichage des boutons filtres
+// ---------- Création et affichage des boutons filtres ---------- //  
 async function displayCategoriesBtn() {
 
     const btns = document.querySelector('.btns');
@@ -164,7 +164,7 @@ async function delWork(workId) {
     }
 }
 
-// --- Confirmation pour suppression
+// --- Confirmation pour suppression --- //
 function confirmDelWork(workId) {
     if (confirm('Êtes-vous sûr de vouloir supprimer ce projet ?')) {
         delWork(workId);
@@ -174,14 +174,14 @@ function confirmDelWork(workId) {
     }
 }
 
-// --- "Redirection" vers ajout d'un projet
+// --- "Redirection" vers ajout d'un projet --- //
 addWork.addEventListener('click', function () {
     modal.style.display = 'none';
     modal2.style.display = 'flex';
     checkConditions();
 });
 
-// --- Flèche retour
+// --- Flèche retour --- //
 back.addEventListener('click', function () {
     modal.style.display = 'flex';
     modal2.style.display = 'none';
@@ -189,7 +189,7 @@ back.addEventListener('click', function () {
     upTitle.value = '';
 });
 
-// --- Récupération dynamique des catégories pour ajout de projet
+// --- Récupération des catégories pour ajout de projet --- //
 async function getSelectCategory() {
     const category = await getCategories();
     for (let i = 1; i < category.length; i++) {
@@ -201,7 +201,7 @@ async function getSelectCategory() {
 }
 getSelectCategory();
 
-// --- Conditions pour le bouton Valider
+// ---------- CONDITIONS POUR LE BOUTON VALIDE ---------- //
 const checkConditions = () => {
     if (uploadImg.files[ 0 ] ?. size < 4000000 && upTitle.value !== '' && selectCategory.value !== '') {
         submitButton.classList.add('envoyer');
@@ -213,7 +213,7 @@ upTitle.addEventListener('input', checkConditions);
 selectCategory.addEventListener('input', checkConditions);
 uploadImg.addEventListener('input', checkConditions);
 
-// --- Requete POST pour envoyer un nouveau work
+// ---------- REQUETE POST POUR ENVOYER UN NOUVEAU WORK ---------- //
 submitButton.addEventListener('click', async ( e ) => {
     e.preventDefault();
     const formData = new FormData(document.getElementById('sendImg'));
@@ -245,14 +245,14 @@ submitButton.addEventListener('click', async ( e ) => {
     }
 });
 
-// --- Prévisualisation de l'image
+// --- Prévisualisation de l'image --- //
 function previewImage(event) {
     const file = event.target.files[0];
     const imageUrl = URL.createObjectURL(file);
     preview.src = imageUrl;
 }
 
-// --- Suppression du token si logout
+// --- Suppression du token si logout --- //
 login.addEventListener('click', function () {
     if (token) {
         sessionStorage.removeItem('accessToken');
